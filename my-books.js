@@ -163,7 +163,7 @@ document.getElementById("search-button").addEventListener("click", () => {
         bookItem.innerHTML += `
             <h2>${book.title}</h2>
             <p>${book.author}</p>
-            <p>Genre: ${book.genre}</p>
+            
             <p>First published: ${book.first_publish_year}</p>
             <button onclick="toggleReadStatus(${index})">${book.read ? "Mark as Unread" : "Mark as Read"}</button>
             <button onclick="addToReadingList(${index})">Add to Reading List</button>
@@ -171,6 +171,36 @@ document.getElementById("search-button").addEventListener("click", () => {
         catalog.appendChild(bookItem);
     });
 });
+document.getElementById("add-button").addEventListener("click", () => {
+    const title = document.getElementById("title").value.trim();
+    const author = document.getElementById("author").value.trim();
+    const genre = document.getElementById("genre").value.trim();
+    const cover = document.getElementById("cover").value.trim();
 
+    if (title && author && genre && cover) {
+        // Create a new book object
+        const newBook = {
+            title,
+            author,
+            genre,
+            cover,
+            first_publish_year: 'N/A', // You can update this later if needed
+            key: `newBook-${Date.now()}` // Unique key for the book
+        };
+
+        // Add new book to the books array
+        books.push(newBook);
+        saveBooks(); // Save updated books array to localStorage
+        renderBooks(); // Re-render the book catalog
+
+        // Clear input fields
+        document.getElementById("title").value = "";
+        document.getElementById("author").value = "";
+        document.getElementById("genre").value = "";
+        document.getElementById("cover").value = "";
+    } else {
+        alert("Please fill in all fields.");
+    }
+});
 // Load books and reading list from localStorage on page load
 loadBooks();
