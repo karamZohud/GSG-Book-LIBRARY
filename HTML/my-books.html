@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/my-books.css" />
+  </head>
+  <body onload="renderBooks()">
+    <header>
+      <a href="../index.html"
+        ><img src="../images/logo.jpg" class="logo" alt="logo"
+      /></a>
+      <h1><a href="../index.html">Bookly</a></h1>
+      <nav>
+        <a href="./reading-list.html">Reading List</a>
+        <a href="../index.html">About Our Library</a>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search by title or author..."
+          />
+          <button id="search-button">Search</button>
+        </div>
+
+        <div class="add-book">
+          <h2>Add a New Book</h2>
+          <input type="text" id="title" placeholder="Book Title" required />
+          <input type="text" id="author" placeholder="Author" required />
+          <input type="text" id="genre" placeholder="Genre" required />
+          <input
+            type="text"
+            id="cover"
+            placeholder="Cover Image URL"
+            required
+          />
+          <button id="add-button">Add Book</button>
+          <input
+            type="number"
+            placeholder="number of books to display"
+            id="countToDisplay"
+            min="1"
+          />
+        </div>
+        <div id="loading">
+          <div class="loader"></div>
+        </div>
+
+        <div class="book-catalog" id="book-catalog">
+          <!-- Books will be dynamically added here -->
+        </div>
+      </main>
+    </div>
+    <footer>
+      <p>&copy; 2024 Bookly. All rights reserved.</p>
+    </footer>
+    <script src="../JS/my-books.js"></script>
+  </body>
+</html>

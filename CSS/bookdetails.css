@@ -1,0 +1,93 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  font-family: "Merriweather", serif;
+}
+
+/* Header */
+header {
+  background-color: #4a90e2;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#book-detail {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#book-detail h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+#book-detail h3 {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#book-detail img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#book-detail p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Link Styling */
+a {
+  color: #4a90e2;
+  cursor: pointer;
+}
+
+.btnBookList {
+  text-decoration: none;
+}
